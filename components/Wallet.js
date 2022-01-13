@@ -30,7 +30,7 @@ const Wallet = (props) => {
 				setDefaultAccount(result[0]);
 				setuserAccount(result[0]);
                 setconnected(true)
-                enqueueSnackbar("Connected!", { 
+                enqueueSnackbar("Connected", { 
                     variant: 'success',
                 });
 			})
@@ -80,7 +80,7 @@ const Wallet = (props) => {
                         {
                             (connected===false)?
                             <>
-                                <p className={styles.errorMsg}>Wallet not connected. Please click the "Connect" button below.</p>
+                                <p className={styles.errorMsg}>Wallet not connected. Please click the Connect button below.</p>
                                 <div className={styles.actionContainer}>
                                     <Button onClick={connectWalletHandler} variant="contained">Connect</Button>
                                     <Button onClick={handleClose} color="warning" variant="contained">Cancel</Button>
